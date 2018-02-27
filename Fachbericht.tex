@@ -1,0 +1,154 @@
+%Autor: Gianluca Picciola
+%Projekt 4, EIT 2018
+
+\documentclass{fhnwreport}
+
+\usepackage{pdflscape}%Für Querformat
+\usepackage[T1]{fontenc}
+\usepackage{trfsigns} %Benutzung Mathematische Zeichen
+\usepackage{textgreek}
+\renewcommand{\figurename}{Fig.}
+\usepackage{float}
+\usepackage{pdfpages}%Import von PDF
+\usepackage{dsfont}
+\usepackage{ngerman}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage[utf8]{inputenc}
+\usepackage{cancel}%zum durchsteichen
+\usepackage{polynom}%zur polynomdivision
+\usepackage{fancyhdr}%für Kopfzeile
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{paralist}
+\usepackage{nameref}%Referenz
+\usepackage{cite}%Quellen
+\usepackage{graphicx}
+\graphicspath{ {Data/} }
+\bibliographystyle{IEEEtran}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows}
+\usepackage{lmodern}  
+\usepackage{wrapfig} 
+\usepackage{siunitx}
+\DeclareSIUnit \Volt {V} 
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\setcounter{tocdepth}{2} % Set depth of table of contents
+\setcounter{secnumdepth}{3}
+
+
+\title{%
+  Fachbericht\\[2ex]
+  Dojo}
+\author{%
+  Team 5, FS 18}
+
+\begin{document}
+
+% Titel
+\maketitle
+
+\vfill
+
+% Titelbild
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = 0.5\textwidth]{Data/Titelbild}
+	\label{fig:Titelbild}
+\end{figure}
+
+\vfill
+
+\begin{tabbing}
+Auftraggeber: \hspace{2em} \=  Gysin Hans, Kalbermatter Jana \\[2ex]
+Betreuer:  \>  Meier Matthias, Schleuniger Pascal, Gertiser Anita, \\ \> Domenghino Bonny, Dubach Roswitha \\[2ex]
+Team:  \> Zoller Simon \\ 
+\> Hunziker Severin \\
+\> Loosli Lukas \\
+\> Picciola Gianluca \\
+\> von Däniken Elias \\
+\> Giambonini Joscha \\
+\> Knupfer Mischa \\[2ex]
+Studiengang: \> Elektro- und Informationstechnik
+\end{tabbing}
+
+\hbox{}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%Abstract%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Abstract}
+\newpage
+
+%%%%%%%%%%%%%Inhaltsverzeichnis%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%Hier werden die einzelnen Dokumente eingefügt%%%
+
+%%%%%%%%%%%%%%%%%Einleitung%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Einleitung}
+
+%%%%%%%%%%%%%%%%%%Grundlagen%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Grundlagen}
+\include{Beispieldokument}
+
+%%%%%%%%%%%%%%%%%%Hardware%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Hardware}
+
+%%%%%%%%%%%%%%%%Software%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Software}
+
+%%%%%%%%%%%%%%Validierung%%%%%%%%%%%%%
+
+\include{Validierung}
+
+%%%%%%%%%%%%%%%%Kosten%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Kosten}
+
+%%%%%%%%%%%%%%%%Schlusswort%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Schlusswort}
+
+%%%%%%%%%%%%%Ehrlichkeitserklärung%%%%%%%%%%%%%%%%
+
+\include{Ehrlichkeitserklaerung}
+
+%%%%%%%%%%%Quellenverzeichnis mit Bibtex%%%%%%%%%%
+\newpage
+\section{Literaturverzeichnis}
+\bibliography{quelle}
+
+%%%%%%%%%%%%%%%%Abbildungsverzeichnis%%%%%%%%%%%%%%
+\newpage
+\section{Abbildungsverzeichnis}
+\renewcommand{\listfigurename}{}
+\listoffigures
+
+%%%%%%%%%%%%%%%%Anhang%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{appendix}
+\include{Anhang}
+\end{appendix}
+
+
+%%%%%%%%%%%%%%%%Dokumentende%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
